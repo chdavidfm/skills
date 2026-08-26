@@ -1,59 +1,23 @@
-# skills — pack de David
+# skills
 
-Agent Skills ([agentskills.io](https://agentskills.io/specification)) para **toda la vida**. No es un producto. No es OpenHuman. No hay 90k skills.
+Agent Skills I actually run in Cursor, Claude Code, and Codex. Spec: [agentskills.io](https://agentskills.io/specification).
 
 [![ci](https://github.com/chdavidfm/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/chdavidfm/skills/actions/workflows/ci.yml)
 
-```mermaid
-flowchart LR
-  David --> Pack[chdavidfm/skills]
-  David --> Vault[Obsidian local]
-  David --> Notion[CRM locales]
-  Pack --> Cursor
-  Pack --> ClaudeCode[Claude Code]
-  Pack --> Codex
-  Producto[renovo-core] --> Prod[userenovo.com]
-```
-
-## Instalar
-
-**Cursor:** clona o copia cada carpeta a `~/.cursor/skills/<name>/`.
-
-**Claude Code / Codex:** apunta al clone; leen `AGENTS.md` + cada `SKILL.md`.
-
-Validar:
+Clone, copy a folder into `~/.cursor/skills/<name>/`, done. To check the pack:
 
 ```bash
 node scripts/validate.mjs
 ```
 
-## Skills
-
-| Skill | Cuándo |
+| Skill | When |
 |---|---|
-| [`github`](./github/SKILL.md) | la cuenta entera, un repo nuevo, CI, perfil |
-| [`ship`](./ship/SKILL.md) | PR + vigilar CI en **cualquier** repo |
-| [`absorb`](./absorb/SKILL.md) | pega un GitHub / skill pack / OS viral |
-| [`verify`](./verify/SKILL.md) | “hecho” o “al máximo” sin evidencia |
-| [`skill-author`](./skill-author/SKILL.md) | escribir un `SKILL.md` que pase CI |
+| [`github`](github/SKILL.md) | the whole GitHub account — not one product |
+| [`ship`](ship/SKILL.md) | PR until CI is green |
+| [`absorb`](absorb/SKILL.md) | someone pastes a repo / skill pack / “elite” screenshot |
+| [`verify`](verify/SKILL.md) | “done” or “maxed out” with no proof |
+| [`skill-author`](skill-author/SKILL.md) | write a `SKILL.md` that passes CI |
 
-Memoria (`ingest`, `captura`, `briefing`…) vive en el vault local. Aquí no se duplica.
+Memory, CRM, and life notes stay off GitHub. Product site: [userenovo.com](https://userenovo.com).
 
-## Cuenta
-
-| Superficie | URL |
-|---|---|
-| Vitrina | [github.com/chdavidfm](https://github.com/chdavidfm) |
-| Producto | [userenovo.com](https://userenovo.com) |
-| Este pack | [chdavidfm/skills](https://github.com/chdavidfm/skills) |
-| Lab | [rag-agent-lab](https://github.com/chdavidfm/rag-agent-lab) |
-
-## Qué se extrae de repos ajenos
-
-CI que falla de verdad. `SKILL.md` estándar. Fases de PR (inspeccionar, reusar PR, logs del job rojo). CODEOWNERS, Dependabot, release en `v*` en repos de **código**.
-
-Qué no: su app, su GPL, flotas, auto-fetch de toda la red, segundo wiki.
-
-## Licencia
-
-MIT. Copyright (c) 2026 Christian David Flórez. No copies código GPL de terceros a este repo.
+MIT. See [CONTRIBUTING.md](CONTRIBUTING.md) if you send a PR.

@@ -1,0 +1,26 @@
+name: Propose a skill
+description: A repeatable flow that does not already live in github / ship / absorb / verify / skill-author
+title: "[propose] "
+labels: []
+body:
+  - type: textarea
+    id: when
+    attributes:
+      label: When should an agent open this skill
+      description: The trigger in the user's words, not a slogan.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Does this belong on GitHub
+      options:
+        - Yes — portable across Cursor / Claude Code / Codex
+        - No — vault-only (ingest, captura, briefing, gtm…)
+    validations:
+      required: true
+  - type: textarea
+    id: not
+    attributes:
+      label: What this is not
+      description: GPL paste, second OS, duplicate of an existing skill.

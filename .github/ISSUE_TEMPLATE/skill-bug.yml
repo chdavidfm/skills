@@ -1,0 +1,19 @@
+name: Skill is wrong
+description: CI red, or a SKILL.md tells the agent to do the wrong thing
+title: "[skill] "
+labels: []
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill
+      placeholder: ship
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Command you ran, or the bad instruction. Paste the validate.mjs / Actions log if CI failed.
+    validations:
+      required: true
