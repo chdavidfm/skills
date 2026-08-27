@@ -25,6 +25,7 @@ La calidad de David: nada hecho sin prueba. Research de otra IA = hipótesis. Es
 
 - Un README bonito.
 - Stars de un repo ajeno.
+- Un widget de trophies / stats (se rompe, y con 3 repos públicos argumenta en contra).
 - “Debería funcionar”.
 - Screenshot de una sola pantalla si el cambio es un flujo (click, submit, otra ruta).
 

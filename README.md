@@ -1,6 +1,6 @@
 # skills
 
-Agent Skills I actually run in Cursor, Claude Code, and Codex. Spec: [agentskills.io](https://agentskills.io/specification).
+Agent Skills I run in Cursor, Claude Code, and Codex. Spec: [agentskills.io](https://agentskills.io/specification). CI fails if a `SKILL.md` is incomplete.
 
 [![ci](https://github.com/chdavidfm/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/chdavidfm/skills/actions/workflows/ci.yml)
 
