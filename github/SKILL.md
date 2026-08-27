@@ -4,7 +4,7 @@ description: Músculo GitHub de TODA la vida de David (perfil, pack de skills, l
 license: MIT
 metadata:
   author: chdavidfm
-  version: "1.3"
+  version: "1.4"
 ---
 
 # github — el músculo de toda la vida
@@ -28,11 +28,33 @@ GitHub de `chdavidfm` no es “el repo de Renovo”. Es el sitio donde vive **c�
 2. Repo nuevo **sólo** si hay código o skills que no caben en los cuatro de arriba. No 30 repos de carpetas.
 3. Org de producto = cuando David la cree en la web. Hasta entonces el usuario `chdavidfm` es la casa.
 4. Source del SaaS **privado**. Ayuda = invitar, no hacer público el producto.
-5. CI que falle si mientes. Releases en `v*` en repos de código. CODEOWNERS. Dependabot. Este pack: `node scripts/validate.mjs`.
+5. CI que falle si mientes. Releases en `v*` en repos de código. CODEOWNERS. Dependabot **calibrado** (abajo). Este pack: `node scripts/validate.mjs`.
 6. Tras merge que importe: Diario 3 frases. Si tocó Renovo, `pulso` en el vault.
 7. Vitrina de perfil en **inglés** (contratación IA): hechos de producción, no eslóganes. Pack `skills` en inglés (spec).
 8. Cero widgets de stats/trophies. Cero jerga de OS en el README de perfil.
-9. Following: si `following > followers` y miles de repos, unfollow. Payloads / HackTricks no es este grafo.
+9. Following: si `following > followers` y miles de repos, unfollow. Payloads / HackTricks no es este grafo. Cuando la lista ya es de constructores (Karpathy, Weng, Raschka, ggerganov, Simon Willison…), **déjala**. Optimizar 19 cuentas no es el músculo.
+
+## Dependabot es un canal, no una lista de tareas
+
+Los defaults abren **un PR por paquete**. En un repo solo eso son nueve notificaciones en un minuto; a la tercera semana el hábito es ignorarlas; el día que llega un parche de seguridad llega en el mismo montón.
+
+Calibración (medida 27/08/2026 en `renovo-core` + `rag-agent-lab`):
+
+- Agrupa `minor`/`patch`. Tope de PRs abiertos (3 en npm/pip, 2 en Actions).
+- Majors del **compilador**, del **runner de tests**, de `@types/node`, de la **imagen Docker de runtime**, de linters que cambian el ruleset (`ruff`, `mypy`): `ignore`. Eso es migración. Se abre como pieza de trabajo con su verificación, no porque el bot lo abrió a las 18:39.
+- Un PR de TypeScript 5→7 o Python 3.11→3.14 **no** se mergea aunque CI del bump esté verde: cambia lo que compila o qué wheels resuelven.
+- Cierra el ruido con el motivo escrito. Silencio = dentro de tres meses no se sabe por qué se rechazó.
+
+## Agentes con veto (patrón, no el producto)
+
+Un loop genérico con una bolsa de tools no es arquitectura. Lo que sí, y lo que se puede decir en público:
+
+1. Agentes **pequeños y con nombre**, un trabajo cada uno. No un “asistente útil”.
+2. Algunos tienen **veto**: pueden parar una pantalla, una afirmación, o un ship. El humano sigue siendo un paso del flujo (reseña negativa: nunca se publica sola).
+3. Uno existe para **intentar tumbar** lo que acabas de afirmar. Eso es `verify` más un agente de verdad. Si no puede fallar, no es un chequeo.
+4. Los prompts del SaaS **no** viven en este pack. El patrón sí. Copiar `.claude/agents/` de un producto a GitHub público es filtrar el oficio, no enseñar el método.
+
+Las tres del vault (`bibliotecario` `fiscal` `cazador`) son el mismo patrón en la vida: compilar, delatar, cazar. No se publican las del producto.
 
 ## Archify (`tt-a1i/archify`) y el tuit de Charlie Hills
 
@@ -51,7 +73,7 @@ Medido 27/08/2026: 21902★, MIT, CI + release + CODEOWNERS. Pestaña **Agents**
 Apache/CC. No se instala. Lo que sí entra a `ship` / `verify`:
 
 - El control flow es código, no un prompt con una bolsa de tools.
-- Agentes pequeños y con dueño (`bibliotecario` `fiscal` `cazador`). No un loop genérico.
+- Agentes pequeños y con dueño. Algunos con **veto** (arriba). No un loop genérico.
 - El humano es un paso del flujo (reseña negativa: nunca se publica sola).
 - “Hecho” = evidencia (`verify`). Un widget no es evidencia.
 
