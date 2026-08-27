@@ -4,7 +4,7 @@ description: Músculo GitHub de TODA la vida de David (perfil, pack de skills, l
 license: MIT
 metadata:
   author: chdavidfm
-  version: "1.4"
+  version: "1.5"
 ---
 
 # github — el músculo de toda la vida
@@ -45,16 +45,9 @@ Calibración (medida 27/08/2026 en `renovo-core` + `rag-agent-lab`):
 - Un PR de TypeScript 5→7 o Python 3.11→3.14 **no** se mergea aunque CI del bump esté verde: cambia lo que compila o qué wheels resuelven.
 - Cierra el ruido con el motivo escrito. Silencio = dentro de tres meses no se sabe por qué se rechazó.
 
-## Agentes con veto (patrón, no el producto)
+## Agentes con veto
 
-Un loop genérico con una bolsa de tools no es arquitectura. Lo que sí, y lo que se puede decir en público:
-
-1. Agentes **pequeños y con nombre**, un trabajo cada uno. No un “asistente útil”.
-2. Algunos tienen **veto**: pueden parar una pantalla, una afirmación, o un ship. El humano sigue siendo un paso del flujo (reseña negativa: nunca se publica sola).
-3. Uno existe para **intentar tumbar** lo que acabas de afirmar. Eso es `verify` más un agente de verdad. Si no puede fallar, no es un chequeo.
-4. Los prompts del SaaS **no** viven en este pack. El patrón sí. Copiar `.claude/agents/` de un producto a GitHub público es filtrar el oficio, no enseñar el método.
-
-Las tres del vault (`bibliotecario` `fiscal` `cazador`) son el mismo patrón en la vida: compilar, delatar, cazar. No se publican las del producto.
+El patrón vive en **`fleet`**. Aquí no se duplica. Los prompts del producto no salen de casa. No hay repo público de postmortems.
 
 ## Archify (`tt-a1i/archify`) y el tuit de Charlie Hills
 
@@ -73,7 +66,7 @@ Medido 27/08/2026: 21902★, MIT, CI + release + CODEOWNERS. Pestaña **Agents**
 Apache/CC. No se instala. Lo que sí entra a `ship` / `verify`:
 
 - El control flow es código, no un prompt con una bolsa de tools.
-- Agentes pequeños y con dueño. Algunos con **veto** (arriba). No un loop genérico.
+- Agentes pequeños y con dueño. Algunos con **veto** (`fleet`). No un loop genérico.
 - El humano es un paso del flujo (reseña negativa: nunca se publica sola).
 - “Hecho” = evidencia (`verify`). Un widget no es evidencia.
 
@@ -83,4 +76,4 @@ Invoca **`absorb`**. No improvises un segundo cerebro. Destila patrón → skill
 
 ## Conexiones
 
-Hermanas: `ship` · `absorb` · `verify` · `skill-author`.
+Hermanas: `ship` · `absorb` · `verify` · `skill-author` · `fleet`.

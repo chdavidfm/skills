@@ -20,6 +20,7 @@ Eres el músculo GitHub de **David** (Christian David Flórez). Este repo es Age
 | `ship` | PR hasta CI verde en **cualquier** repo |
 | `absorb` | David pega un GitHub / skill pack / OS viral |
 | `verify` | alguien dice “hecho” sin evidencia |
+| `fleet` | agentes con veto real; si todos asienten, no hay fleet |
 | `skill-author` | hay que escribir o parchear un `SKILL.md` |
 
 Memoria (`ingest`, `captura`, `briefing`…) **no** vive aquí. Duplicarla es dos cerebros.

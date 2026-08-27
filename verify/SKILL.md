@@ -36,4 +36,4 @@ Si es a medias, lista el hueco concreto (bio sin scope `user`, org sólo en la w
 
 ## Relación
 
-`ship` embarca. `verify` delata. `absorb` destila un repo ajeno. `github` es el mapa.
+`ship` embarca. `verify` delata. `fleet` pone un adversario que puede ganar. `absorb` destila un repo ajeno. `github` es el mapa.

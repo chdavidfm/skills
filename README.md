@@ -16,6 +16,7 @@ node scripts/validate.mjs
 | [`ship`](ship/SKILL.md) | PR until CI is green |
 | [`absorb`](absorb/SKILL.md) | someone pastes a repo / skill pack / “elite” screenshot |
 | [`verify`](verify/SKILL.md) | “done” or “maxed out” with no proof |
+| [`fleet`](fleet/SKILL.md) | agents that argue instead of agreeing |
 | [`skill-author`](skill-author/SKILL.md) | write a `SKILL.md` that passes CI |
 
 Memory, CRM, and life notes stay off GitHub. Product site: [userenovo.com](https://userenovo.com).
